@@ -1,5 +1,5 @@
 const {
-  OPEANAI_MAX_TOKENS,
+  OPENAI_MAX_TOKENS,
 } = require('../configs');
 
 const openai = require('../connections/openai');
@@ -21,7 +21,7 @@ async function chatAI({ content, description }) {
         content: description,
       },
     ],
-    max_tokens: Number(OPEANAI_MAX_TOKENS),
+    max_tokens: Number(OPENAI_MAX_TOKENS),
   });
 
   return response.data.choices[0].message.content;
